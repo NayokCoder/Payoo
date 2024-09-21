@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Payoo</title>
+</head>
+
+<body>
+    <main class="flex justify-center align-middle">
+        <div class="mockup-phone">
+            <div class="camera"></div>
+            <div class="display">
+                <div class="artboard artboard-demo phone-1">
+                    <div class="hero bg-base-200 min-h-screen">
+                        <div class="hero-content flex-col lg:flex-row-reverse">
+
+                            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                                <form class="card-body">
+                                    <!-- Total Amount Section -->
+                                    <div class="w-full flex justify-between">
+                                        <div class="">
+                                            <div class="">
+                                                <div class="stat-figure text-primary"></div>
+                                            </div>
+                                            <div class="stat-title">Total Amount</div>
+                                            <div id="total-amount" class="stat-value text-primary">100000</div>
+                                        </div>
+                                        <div class="avatar online">
+                                            <div class="w-16 rounded-full">
+                                                <img class="align"
+                                                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Buttons to navigate between sections -->
+                                    <div class="mt-4">
+                                        <button id="add-sec" type="button" class="btn btn-primary">Add Money</button>
+                                        <button id="out-sec" type="button" class="btn btn-primary">Cash Out</button>
+                                        <button id="trx-sec" type="button" class="btn btn-primary">Trx History</button>
+                                        <button id="log-out" type="button" class="btn btn-primary">Log Out</button>
+
+                                    </div>
+
+                                    <!-- Add Money Part -->
+                                    <div id="add-money-part" class="hidden">
+                                        <div class="form-control">
+                                            <label class="label">
+                                                <span class="label-text">Add Amount</span>
+                                            </label>
+                                            <input id="input-add-money" type="number" placeholder="Type Your Amount"
+                                                class="input input-bordered" />
+                                        </div>
+                                        <div class="form-control">
+                                            <label class="label">
+                                                <span class="label-text">Pin</span>
+                                            </label>
+                                            <input id="input-add-pin" type="password" placeholder="Type Your PIN"
+                                                autocomplete="off" class="input input-bordered" />
+                                        </div>
+                                        <div class="form-control mt-6">
+                                            <button id="add-money" class="btn btn-primary">ADD MONEY</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Cash Out Part -->
+                                    <div id="cash-out-part" class="hidden">
+                                        <div class="form-control">
+                                            <label class="label">
+                                                <span class="label-text">Cash Out Amount</span>
+                                            </label>
+                                            <input id="input-cashout-amount" type="number"
+                                                placeholder="Type Your Amount" class="input input-bordered" />
+                                        </div>
+                                        <div class="form-control">
+                                            <label class="label">
+                                                <span class="label-text">Pin</span>
+                                            </label>
+                                            <input id="input-cashout-pin" type="password" placeholder="Type Your PIN"
+                                                autocomplete="off" class="input input-bordered" />
+                                        </div>
+                                        <div class="form-control mt-6">
+                                            <button id="btn-cashout" class="btn btn-primary">Cash Out</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Transaction History Part -->
+                                    <div id="trx-part" class="hidden">
+                                        <div class="form-control">
+                                            <h1 class="text-center font-bold">TRANSACTION HISTORY</h1>
+                                            <hr>
+                                            <div id="trx-input"></div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="payoo-cashout.js"></script>
+    <script src="payoo-addmoney.js"></script>
+    <script src="payoo.function.js"></script>
+    <script src="library.js"></script>
+
+</body>
+
+</html>
